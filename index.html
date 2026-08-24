@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="5">
+    <title>Document</title>
+    <style>
+      :root {
+        --bg: #f1f5f9;
+        --card: #ffffff;
+        --card-hover: #f1f5f9;
+        --border: #e2e8f0;
+        --text: #1e293b;
+        --text-dim: #64748b;
+        --accent: #6366f1;
+        --accent-hover: #4f46e5;
+        --green: #16a34a;
+        --red: #dc2626;
+        --yellow: #ca8a04;
+        --radius: 12px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        text-align: left;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: transparent; /* Removes mobile blue tap overlay */
+        -webkit-user-select: none;                 /* Disables selection highlight */
+        user-select: none;
+      }
+      form {
+        background-color: var(--card); /* Changed to white card background for visibility */
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        width: 320px;
+        /* Centering the content inside the form */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px; /* Adds clean spacing between elements instead of <br> tags */
+      }
+      label {
+        width: 100%;
+        font-weight: 500;
+        color: var(--text-dim);
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+      }
+      button {
+        background-color: var(--green);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        cursor: pointer;
+        margin-top: 10px;
+        
+        /* Features requested in previous prompts */
+        -webkit-tap-highlight-color: transparent; /* Removes mobile blue tap overlay */
+        -webkit-user-select: none;                 /* Disables selection highlight */
+        user-select: none;
+      }
+      button:hover {
+        box-shadow: 0 0 22px #84fc98,0 0 44px #48ec9a33;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed the action attribute to method or added proper form syntax -->
+    <form method="GET" action="">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+
+      <label for="mobile">Mobile number</label>
+      <input type="tel" id="mobile" value="+91" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+
+      <label for="dob">DOB</label>
+      <input type="date" id="dob" />
+
+      <label for="file">Upload file</label>
+      <input type="file" id="file" />
+
+      <input type="checkbox" id="ckb"  />I agree terms and conditions
+
+      <!-- Fixed missing closing tag for button -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
